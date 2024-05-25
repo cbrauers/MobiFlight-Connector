@@ -169,7 +169,7 @@ namespace MobiFlight
                 }
                 else if (diJoystick.Properties.VendorId == 0x231D)
                 {
-                    js = new VKBDevice(diJoystick, GetDefinitionByInstanceName(d.InstanceName));
+                    js = new VKBDevice(diJoystick, GetDefinitionByInstanceName(d.InstanceName.Trim()));
                 }
                 else
                 {

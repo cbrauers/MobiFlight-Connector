@@ -12,7 +12,7 @@ namespace MobiFlight.Joysticks.VKB
     internal class VKBDevice : Joystick
     {
         private HidStream Stream;
-        private HidDevice Device;
+        private readonly HidDevice Device;
         private readonly JoystickDefinition Definition;
         private readonly VKBLedContainer Lights = new VKBLedContainer();
 

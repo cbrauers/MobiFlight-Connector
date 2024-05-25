@@ -19,8 +19,8 @@
             UltraFast = 4
         };
         private readonly JoystickOutputDevice[] LedChannels = new JoystickOutputDevice[3];
-        private bool dirty = true;
-        private byte LedId = 0;
+        private bool dirty = false;
+        private readonly byte LedId = 0;
         private const byte defaultBrightness = 5;
         public VKBLed(byte id)
         {
@@ -29,11 +29,27 @@
         public void AddChannel(JoystickOutput output)
         {
             if (LedChannels[output.Bit] != null) return;
-            LedChannels[output.Bit] = new JoystickOutputDevice { Label = output.Label, Name = output.Id, Byte = output.Byte, Bit = output.Bit };
+            LedChannels[output.Bit] = new JoystickOutputDevice
+            {
+                Label = output.Label,
+                Name = output.Id,
+                Byte = output.Byte,
+                Bit = output.Bit,
+                State = 255
+            };
         }
         public void SetState(byte channel, byte state)
         {
-            if (LedChannels[channel].State != state) dirty = true;
+            if (LedChannels[channel].State == 255)
+            {
+                foreach(JoystickOutputDevice chan in LedChannels)
+                {
+                    if(chan == null) continue;
+                    chan.State = 0;
+                }
+                dirty = true;
+            }
+            else if (LedChannels[channel].State != state) dirty = true;
             LedChannels[channel].State = state;
         }
         public byte[] Serialize()
@@ -94,13 +110,6 @@
             LedBlock[3] = (byte)(ColorIntensity[1, 2] >> 1 | (byte)pattern << 2 | (byte)colmode << 5);
             dirty = false;
             return LedBlock;
-        }
-        public static (ColorMode,FlashPattern) decodeLED(byte B0, byte B1, byte B2)
-        {
-            ColorMode colmode = (ColorMode)(B2 >> 5);
-            FlashPattern pattern = (FlashPattern)((B2 >> 2) & 0x07);
-            return (colmode, pattern);
-
         }
         public bool IsChanged()
         {

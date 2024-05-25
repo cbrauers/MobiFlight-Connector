@@ -1,8 +1,8 @@
 {
   "$schema": "./mfjoystick.schema.json",
-  "InstanceName": "VKBsim Gladiator EVO R",
+  "InstanceName": "VKBsim Gladiator EVO R SEM",
   "VendorId": "0x231D",
-  "ProductId": "0x0200",
+  "ProductId": "0x0204",
   "Inputs": [
     {
       "Id": 1,
@@ -231,6 +231,102 @@
       "Id": "Oval.Blue",
       "Byte": 10,
       "Bit": 2
+    },
+    {
+      "Label": "A1 - Green",
+      "Id": "A1.Green",
+      "Byte": 12,
+      "Bit": 0
+    },
+    {
+      "Label": "A1 - Red",
+      "Id": "A1.Red",
+      "Byte": 12,
+      "Bit": 1
+    },
+    {
+      "Label": "A2 - Green",
+      "Id": "A2.Green",
+      "Byte": 13,
+      "Bit": 0
+    },
+    {
+      "Label": "A2 - Red",
+      "Id": "A2.Red",
+      "Byte": 13,
+      "Bit": 1
+    },
+    {
+      "Label": "B1 - Green",
+      "Id": "B1.Green",
+      "Byte": 14,
+      "Bit": 0
+    },
+    {
+      "Label": "B1 - Red",
+      "Id": "B1.Red",
+      "Byte": 14,
+      "Bit": 1
+    },
+    {
+      "Label": "B2 - Green",
+      "Id": "B2.Green",
+      "Byte": 15,
+      "Bit": 0
+    },
+    {
+      "Label": "B2 - Red",
+      "Id": "B2.Red",
+      "Byte": 15,
+      "Bit": 1
+    },
+    {
+      "Label": "B3 - Green",
+      "Id": "B3.Green",
+      "Byte": 16,
+      "Bit": 0
+    },
+    {
+      "Label": "B3 - Red",
+      "Id": "B3.Red",
+      "Byte": 16,
+      "Bit": 1
+    },
+    {
+      "Label": "Gear Left - Green",
+      "Id": "GearL.Green",
+      "Byte": 17,
+      "Bit": 0
+    },
+    {
+      "Label": "Gear Left - Red",
+      "Id": "GearL.Red",
+      "Byte": 17,
+      "Bit": 1
+    },
+    {
+      "Label": "Gear Center - Green",
+      "Id": "GearC.Green",
+      "Byte": 18,
+      "Bit": 0
+    },
+    {
+      "Label": "Gear Center - Red",
+      "Id": "GearC.Red",
+      "Byte": 18,
+      "Bit": 1
+    },
+    {
+      "Label": "Gear Right - Green",
+      "Id": "GearR.Green",
+      "Byte": 19,
+      "Bit": 0
+    },
+    {
+      "Label": "Gear Right - Red",
+      "Id": "GearR.Red",
+      "Byte": 19,
+      "Bit": 1
     }
   ]
 }
