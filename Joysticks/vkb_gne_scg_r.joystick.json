@@ -1,0 +1,212 @@
+{
+  "$schema": "./mfjoystick.schema.json",
+  "InstanceName": " VKBsim Gladiator EVO R  ",
+  "VendorId": "0x231D",
+  "ProductId": "0x0200",
+  "Inputs": [
+    {
+      "Id": 1,
+      "Type": "Button",
+      "Label": "Trigger 1"
+    },
+    {
+      "Id": 2,
+      "Type": "Button",
+      "Label": "Trigger 2"
+    },
+    {
+      "Id": 3,
+      "Type": "Button",
+      "Label": "A2"
+    },
+    {
+      "Id": 4,
+      "Type": "Button",
+      "Label": "B1"
+    },
+    {
+      "Id": 5,
+      "Type": "Button",
+      "Label": "D1"
+    },
+    {
+      "Id": 6,
+      "Type": "Button",
+      "Label": "A3 Up"
+    },
+    {
+      "Id": 7,
+      "Type": "Button",
+      "Label": "A3 Right"
+    },
+    {
+      "Id": 8,
+      "Type": "Button",
+      "Label": "A3 Down"
+    },
+    {
+      "Id": 9,
+      "Type": "Button",
+      "Label": "A3 Left"
+    },
+    {
+      "Id": 10,
+      "Type": "Button",
+      "Label": "A3 Push"
+    },
+    {
+      "Id": 11,
+      "Type": "Button",
+      "Label": "A4 Up"
+    },
+    {
+      "Id": 12,
+      "Type": "Button",
+      "Label": "A4 Right"
+    },
+    {
+      "Id": 13,
+      "Type": "Button",
+      "Label": "A4 Down"
+    },
+    {
+      "Id": 14,
+      "Type": "Button",
+      "Label": "A4 Left"
+    },
+    {
+      "Id": 15,
+      "Type": "Button",
+      "Label": "A4 Push"
+    },
+    {
+      "Id": 16,
+      "Type": "Button",
+      "Label": "C1 Up"
+    },
+    {
+      "Id": 17,
+      "Type": "Button",
+      "Label": "C1 Right"
+    },
+    {
+      "Id": 18,
+      "Type": "Button",
+      "Label": "C1 Down"
+    },
+    {
+      "Id": 19,
+      "Type": "Button",
+      "Label": "C1 Left"
+    },
+    {
+      "Id": 20,
+      "Type": "Button",
+      "Label": "C1 Push"
+    },
+    {
+      "Id": 21,
+      "Type": "Button",
+      "Label": "Rapid Fire Push"
+    },
+    {
+      "Id": 22,
+      "Type": "Button",
+      "Label": "Rapid Fire Pull"
+    },
+    {
+      "Id": 23,
+      "Type": "Button",
+      "Label": "En1 Up"
+    },
+    {
+      "Id": 24,
+      "Type": "Button",
+      "Label": "En1 Down"
+    },
+    {
+      "Id": 25,
+      "Type": "Button",
+      "Label": "Sw1 Up"
+    },
+    {
+      "Id": 26,
+      "Type": "Button",
+      "Label": "Sw1 Down"
+    },
+    {
+      "Id": 27,
+      "Type": "Button",
+      "Label": "F1"
+    },
+    {
+      "Id": 28,
+      "Type": "Button",
+      "Label": "F2"
+    },
+    {
+      "Id": 29,
+      "Type": "Button",
+      "Label": "F3"
+    },
+    {
+      "Id": 30,
+      "Type": "Button",
+      "Label": "A1 Push"
+    },
+    {
+      "Id": 49,
+      "Type": "Axis",
+      "Label": "Axis - Pitch"
+    },
+    {
+      "Id": 48,
+      "Type": "Axis",
+      "Label": "Axis - Roll"
+    },
+    {
+      "Id": 53,
+      "Type": "Axis",
+      "Label": "Axis - Twist"
+    },
+    {
+      "Id": 52,
+      "Type": "Axis",
+      "Label": "Axis - A1 Y"
+    },
+    {
+      "Id": 51,
+      "Type": "Axis",
+      "Label": "Axis - A1 X"
+    },
+    {
+      "Id": 50,
+      "Type": "Axis",
+      "Label": "Axis - Mini-Throttle"
+    },
+    {
+      "Id": 54,
+      "Type": "Axis",
+      "Label": "Axis - Sw1"
+    },
+    {
+      "Id": 55,
+      "Type": "Axis",
+      "Label": "Axis - Aux"
+    }
+  ],
+  "Outputs": [
+    {
+      "Label": "Base Status - Blue",
+      "Id": "Base.Blue",
+      "Byte": 0,
+      "Bit": 0
+    },
+    {
+      "Label": "Base Status - Red",
+      "Id": "Base.Red",
+      "Byte": 0,
+      "Bit": 1
+    }
+  ]
+}
