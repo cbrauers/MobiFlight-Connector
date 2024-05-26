@@ -209,28 +209,28 @@
       "Bit": 1
     },
     {
-      "Label": "Round",
-      "Id": "Round",
+      "Label": "SCG Round",
+      "Id": "SCG.Round",
       "Byte": 11,
       "Bit": 0
     },
     {
-      "Label": "Oval - Red",
-      "Id": "Oval.Red",
+      "Label": "SCG Oval - Red",
+      "Id": "SCG.Oval.Red",
       "Byte": 10,
       "Bit": 0
     },
     {
-      "Label": "Oval - Green",
-      "Id": "Oval.Green",
+      "Label": "SCG Oval - Green",
+      "Id": "SCG.Oval.Green",
       "Byte": 10,
       "Bit": 1
     },
     {
-      "Label": "Oval - Blue",
-      "Id": "Oval.Blue",
+      "Label": "SCG Oval - Blue",
+      "Id": "SCG.Oval.Blue",
       "Byte": 10,
       "Bit": 2
-    }
+    },
   ]
 }

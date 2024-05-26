@@ -19,7 +19,9 @@
             UltraFast = 4
         };
         private readonly JoystickOutputDevice[] LedChannels = new JoystickOutputDevice[3];
-        private bool dirty = false;
+        private bool dirty = true;
+        private bool used = false;
+        private bool greenred = false;
         private readonly byte LedId = 0;
         private const byte defaultBrightness = 5;
         public VKBLed(byte id)
@@ -35,21 +37,21 @@
                 Name = output.Id,
                 Byte = output.Byte,
                 Bit = output.Bit,
-                State = 255
+                State = 0
             };
+            // Green/Red LEDs need special treatment, so let us track that:
+            if (LedChannels[0] != null
+             && LedChannels[0].Label.Contains("Green") // feels like a dirty hack, but requires no additional config data
+             && LedChannels[1] != null
+             && LedChannels[1].Label.Contains("Red"))
+            {
+                greenred = true;
+            }
         }
         public void SetState(byte channel, byte state)
         {
-            if (LedChannels[channel].State == 255)
-            {
-                foreach(JoystickOutputDevice chan in LedChannels)
-                {
-                    if(chan == null) continue;
-                    chan.State = 0;
-                }
-                dirty = true;
-            }
-            else if (LedChannels[channel].State != state) dirty = true;
+            used = true;
+            if (LedChannels[channel].State != state) dirty = true;
             LedChannels[channel].State = state;
         }
         public byte[] Serialize()
@@ -75,11 +77,49 @@
                     ColorIntensity[0, channel.Bit] = (byte)(channel.State * defaultBrightness);
                 }
             }
+            else if (greenred)
+            {
+                // Green/Red LEDs need special treatment, due to the always-green feature and the overpowering green at high intensities
+                int color = ((LedChannels[0].State != 0) ? 1 : 0) + ((LedChannels[1].State != 0) ? 2 : 0); // 0: off, 1: green, 2: red, 3: amber
+                byte brightnessG = defaultBrightness;
+                byte brightnessR = defaultBrightness;
+                switch (color)
+                {
+                    case 0:
+                        brightnessG = 0;
+                        brightnessR = 0;
+                        pattern = FlashPattern.Constantly;  // Off would turn the LEDs on in a dim green unless a jumper
+                        colmode = ColorMode.Color1;         // is changed in hardware, so Color1 at brightness zero it is
+                        break;
+                    case 1:
+                        brightnessG = 3;
+                        brightnessR = 0;
+                        pattern = FlashPattern.Constantly;
+                        colmode = ColorMode.Color1;
+                        break;
+                    case 2:
+                        brightnessG = 0;
+                        brightnessR = 5;
+                        pattern = FlashPattern.Constantly;
+                        colmode = ColorMode.Color2;
+                        break;
+                    case 3:
+                        brightnessG = 2;
+                        brightnessR = 7;
+                        pattern = FlashPattern.Constantly;
+                        colmode = ColorMode.Color1plus2;
+                        break;
+                    default: // no default, all cases handled
+                        break;
+                }
+                ColorIntensity[0, 1] = brightnessG;
+                ColorIntensity[1, 1] = brightnessR;
+            }
             else
             {
                 byte brightness = defaultBrightness;
                 if (activeLeds > 1) brightness = 7;
-                // Single or bicolor LED
+                // Single or bicolor LED, other than red/green LEDs
                 for (int col = 0; col < ColorIntensity.GetLength(0); col++)
                 {
                     byte[] channelstate = new byte[2] { (LedChannels[0]?.State ?? 0), (LedChannels[1]?.State ?? 0) };
@@ -113,7 +153,7 @@
         }
         public bool IsChanged()
         {
-            return dirty;
+            return dirty && used;
         }
     }
 }

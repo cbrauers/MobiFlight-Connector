@@ -1,0 +1,117 @@
+{
+  "$schema": "./mfjoystick.schema.json",
+  "InstanceName": "VKBSim NXT SEM THQ",
+  "VendorId": "0x231D",
+  "ProductId": "0x2214",
+  "Inputs": [],
+  "Outputs": [
+    {
+      "Label": "Sys - Blue",
+      "Id": "Sys.Blue",
+      "Byte": 0,
+      "Bit": 0
+    },
+    {
+      "Label": "Sys - Red",
+      "Id": "Sys.Red",
+      "Byte": 0,
+      "Bit": 1
+    },
+    {
+      "Label": "SEM A1 - Green",
+      "Id": "SEM.A1.Green",
+      "Byte": 10,
+      "Bit": 0
+    },
+    {
+      "Label": "SEM A1 - Red",
+      "Id": "SEM.A1.Red",
+      "Byte": 10,
+      "Bit": 1
+    },
+    {
+      "Label": "SEM A2 - Green",
+      "Id": "SEM.A2.Green",
+      "Byte": 11,
+      "Bit": 0
+    },
+    {
+      "Label": "SEM A2 - Red",
+      "Id": "SEM.A2.Red",
+      "Byte": 11,
+      "Bit": 1
+    },
+    {
+      "Label": "SEM B1 - Green",
+      "Id": "SEM.B1.Green",
+      "Byte": 12,
+      "Bit": 0
+    },
+    {
+      "Label": "SEM B1 - Red",
+      "Id": "SEM.B1.Red",
+      "Byte": 12,
+      "Bit": 1
+    },
+    {
+      "Label": "SEM B2 - Green",
+      "Id": "SEM.B2.Green",
+      "Byte": 13,
+      "Bit": 0
+    },
+    {
+      "Label": "SEM B2 - Red",
+      "Id": "SEM.B2.Red",
+      "Byte": 13,
+      "Bit": 1
+    },
+    {
+      "Label": "SEM B3 - Green",
+      "Id": "SEM.B3.Green",
+      "Byte": 14,
+      "Bit": 0
+    },
+    {
+      "Label": "SEM B3 - Red",
+      "Id": "SEM.B3.Red",
+      "Byte": 14,
+      "Bit": 1
+    },
+    {
+      "Label": "SEM Gear Left - Green",
+      "Id": "SEM.GearL.Green",
+      "Byte": 15,
+      "Bit": 0
+    },
+    {
+      "Label": "SEM Gear Left - Red",
+      "Id": "SEM.GearL.Red",
+      "Byte": 15,
+      "Bit": 1
+    },
+    {
+      "Label": "SEM Gear Center - Green",
+      "Id": "SEM.GearC.Green",
+      "Byte": 16,
+      "Bit": 0
+    },
+    {
+      "Label": "SEM Gear Center - Red",
+      "Id": "SEM.GearC.Red",
+      "Byte": 16,
+      "Bit": 1
+    },
+    {
+      "Label": "SEM Gear Right - Green",
+      "Id": "SEM.GearR.Green",
+      "Byte": 17,
+      "Bit": 0
+    },
+    {
+      "Label": "SEM Gear Right - Red",
+      "Id": "SEM.GearR.Red",
+      "Byte": 17,
+      "Bit": 1
+    }
+  ]
+}

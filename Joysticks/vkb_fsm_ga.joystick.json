@@ -18,146 +18,146 @@
       "Bit": 1
     },
     {
-      "Label": "HDG - Green",
-      "Id": "HDG.Green",
+      "Label": "FSM.GA HDG - Green",
+      "Id": "FSMGA.HDG.Green",
       "Byte": 10,
       "Bit": 0
     },
     {
-      "Label": "HDG - Red",
-      "Id": "HDG.Red",
+      "Label": "FSM.GA HDG - Red",
+      "Id": "FSMGA.HDG.Red",
       "Byte": 10,
       "Bit": 1
     },
     {
-      "Label": "TRK - Green",
-      "Id": "TRK.Green",
+      "Label": "FSM.GA TRK - Green",
+      "Id": "FSMGA.TRK.Green",
       "Byte": 11,
       "Bit": 0
     },
     {
-      "Label": "TRK - Red",
-      "Id": "TRK.Red",
+      "Label": "FSM.GA TRK - Red",
+      "Id": "FSMGA.TRK.Red",
       "Byte": 11,
       "Bit": 1
     },
     {
-      "Label": "NAV - Green",
-      "Id": "NAV.Green",
+      "Label": "FSM.GA NAV - Green",
+      "Id": "FSMGA.NAV.Green",
       "Byte": 12,
       "Bit": 0
     },
     {
-      "Label": "NAV - Red",
-      "Id": "NAV.Red",
+      "Label": "FSM.GA NAV - Red",
+      "Id": "FSMGA.NAV.Red",
       "Byte": 12,
       "Bit": 1
     },
     {
-      "Label": "APR - Green",
-      "Id": "APR.Green",
+      "Label": "FSM.GA APR - Green",
+      "Id": "FSMGA.APR.Green",
       "Byte": 13,
       "Bit": 0
     },
     {
-      "Label": "APR - Red",
-      "Id": "APR.Red",
+      "Label": "FSM.GA APR - Red",
+      "Id": "FSMGA.APR.Red",
       "Byte": 13,
       "Bit": 1
     },
     {
-      "Label": "ALT - Green",
-      "Id": "ALT.Green",
+      "Label": "FSM.GA ALT - Green",
+      "Id": "FSMGA.ALT.Green",
       "Byte": 14,
       "Bit": 0
     },
     {
-      "Label": "ALT - Red",
-      "Id": "ALT.Red",
+      "Label": "FSM.GA ALT - Red",
+      "Id": "FSMGA.ALT.Red",
       "Byte": 14,
       "Bit": 1
     },
     {
-      "Label": "LVL - Green",
-      "Id": "LVL.Green",
+      "Label": "FSM.GA LVL - Green",
+      "Id": "FSMGA.LVL.Green",
       "Byte": 15,
       "Bit": 0
     },
     {
-      "Label": "LVL - Red",
-      "Id": "LVL.Red",
+      "Label": "FSM.GA LVL - Red",
+      "Id": "FSMGA.LVL.Red",
       "Byte": 15,
       "Bit": 1
     },
     {
-      "Label": "VNAV - Green",
-      "Id": "VNAV.Green",
+      "Label": "FSM.GA VNAV - Green",
+      "Id": "FSMGA.VNAV.Green",
       "Byte": 16,
       "Bit": 0
     },
     {
-      "Label": "VNAV - Red",
-      "Id": "VNAV.Red",
+      "Label": "FSM.GA VNAV - Red",
+      "Id": "FSMGA.VNAV.Red",
       "Byte": 16,
       "Bit": 1
     },
     {
-      "Label": "IAS - Green",
-      "Id": "IAS.Green",
+      "Label": "FSM.GA IAS - Green",
+      "Id": "FSMGA.IAS.Green",
       "Byte": 17,
       "Bit": 0
     },
     {
-      "Label": "IAS - Red",
-      "Id": "IAS.Red",
+      "Label": "FSM.GA IAS - Red",
+      "Id": "FSMGA.IAS.Red",
       "Byte": 17,
       "Bit": 1
     },
     {
-      "Label": "AP - Green",
-      "Id": "AP.Green",
+      "Label": "FSM.GA AP - Green",
+      "Id": "FSMGA.AP.Green",
       "Byte": 18,
       "Bit": 0
     },
     {
-      "Label": "AP - Red",
-      "Id": "AP.Red",
+      "Label": "FSM.GA AP - Red",
+      "Id": "FSMGA.AP.Red",
       "Byte": 18,
       "Bit": 1
     },
     {
-      "Label": "FD - Green",
-      "Id": "FD.Green",
+      "Label": "FSM.GA FD - Green",
+      "Id": "FSMGA.FD.Green",
       "Byte": 19,
       "Bit": 0
     },
     {
-      "Label": "FD - Red",
-      "Id": "FD.Red",
+      "Label": "FSM.GA FD - Red",
+      "Id": "FSMGA.FD.Red",
       "Byte": 19,
       "Bit": 1
     },
     {
-      "Label": "YD - Green",
-      "Id": "YD.Green",
+      "Label": "FSM.GA YD - Green",
+      "Id": "FSMGA.YD.Green",
       "Byte": 20,
       "Bit": 0
     },
     {
-      "Label": "YD - Red",
-      "Id": "YD.Red",
+      "Label": "FSM.GA YD - Red",
+      "Id": "FSMGA.YD.Red",
       "Byte": 20,
       "Bit": 1
     },
     {
-      "Label": "VS - Green",
-      "Id": "VS.Green",
+      "Label": "FSM.GA VS - Green",
+      "Id": "FSMGA.VS.Green",
       "Byte": 21,
       "Bit": 0
     },
     {
-      "Label": "VS - Red",
-      "Id": "VS.Red",
+      "Label": "FSM.GA VS - Red",
+      "Id": "FSMGA.VS.Red",
       "Byte": 21,
       "Bit": 1
     }
