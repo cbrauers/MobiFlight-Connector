@@ -17,8 +17,15 @@ namespace MobiFlight.Joysticks.VKB
         }
         public void UpdateState (string Label, byte State)
         {
-            (byte Byte, byte Bit) = Labels[Label];
-            Leds[Byte]?.SetState(Bit, State);
+            String[] updateLabels = Label.Split('|');
+            foreach (String updateLabel in updateLabels)
+            {
+                if (Labels.ContainsKey(updateLabel))
+                {
+                    (byte Byte, byte Bit) = Labels[updateLabel];
+                    Leds[Byte]?.SetState(Bit, State);
+                }
+            }
         }
         public byte[] CreateMessage()
         {
