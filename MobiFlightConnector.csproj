@@ -1080,9 +1080,6 @@
     <None Include="Joysticks\vkb_gne_scg_r_sem.joystick.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Joysticks\vkb_stecs_supermax.joystick.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Joysticks\winwing_fcu.joystick.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
