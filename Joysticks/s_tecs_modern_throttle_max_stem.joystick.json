@@ -45,7 +45,17 @@
       "Label": "Multi CCW"
     },
     {
+      "Id": 1000,
+      "Type": "Button",
+      "Label": "Multi CCW"
+    },
+    {
       "Id": 9,
+      "Type": "Button",
+      "Label": "Multi CW"
+    },
+    {
+      "Id": 1005,
       "Type": "Button",
       "Label": "Multi CW"
     },
@@ -103,6 +113,26 @@
       "Id": 20,
       "Type": "Button",
       "Label": "Multi Push"
+    },
+    {
+      "Id": 1010,
+      "Type": "Button",
+      "Label": "MTG-L Front Encoder Up"
+    },
+    {
+      "Id": 1015,
+      "Type": "Button",
+      "Label": "MTG-L Front Encoder Down"
+    },
+    {
+      "Id": 1020,
+      "Type": "Button",
+      "Label": "MTG-L Side Encoder Fwd"
+    },
+    {
+      "Id": 1025,
+      "Type": "Button",
+      "Label": "MTG-L Side Encoder Aft"
     },
     {
       "Id": 48,
@@ -190,7 +220,17 @@
       "Label": "STEM En1 CCW"
     },
     {
+      "Id": 1030,
+      "Type": "Button",
+      "Label": "STEM En1 CCW"
+    },
+    {
       "Id": 65,
+      "Type": "Button",
+      "Label": "STEM En1 CW"
+    },
+    {
+      "Id": 1035,
       "Type": "Button",
       "Label": "STEM En1 CW"
     },
@@ -200,7 +240,17 @@
       "Label": "STEM En2 CCW"
     },
     {
+      "Id": 1040,
+      "Type": "Button",
+      "Label": "STEM En2 CCW"
+    },
+    {
       "Id": 67,
+      "Type": "Button",
+      "Label": "STEM En2 CW"
+    },
+    {
+      "Id": 1045,
       "Type": "Button",
       "Label": "STEM En2 CW"
     },

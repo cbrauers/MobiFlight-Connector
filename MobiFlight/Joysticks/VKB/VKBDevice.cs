@@ -57,6 +57,7 @@ namespace MobiFlight.Joysticks.VKB
             base.EnumerateDevices();
             SortedList<byte, JoystickDevice> EncoderDecList = new SortedList<byte, JoystickDevice>();
             SortedList<byte, JoystickDevice> EncoderIncList = new SortedList<byte, JoystickDevice>();
+            if (Definition == null || Definition.Inputs == null) return;
             foreach (var input in Definition.Inputs)
             {
                 if (input.Id >= 1000 && input.Id < 2000 && input.Type == JoystickDeviceType.Button)
