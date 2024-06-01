@@ -5,116 +5,6 @@
   "ProductId": "0x0204",
   "Inputs": [
     {
-      "Id": 1,
-      "Type": "Button",
-      "Label": "Trigger 1"
-    },
-    {
-      "Id": 2,
-      "Type": "Button",
-      "Label": "Trigger 2"
-    },
-    {
-      "Id": 3,
-      "Type": "Button",
-      "Label": "A2"
-    },
-    {
-      "Id": 4,
-      "Type": "Button",
-      "Label": "B1"
-    },
-    {
-      "Id": 5,
-      "Type": "Button",
-      "Label": "D1"
-    },
-    {
-      "Id": 6,
-      "Type": "Button",
-      "Label": "A3 Up"
-    },
-    {
-      "Id": 7,
-      "Type": "Button",
-      "Label": "A3 Right"
-    },
-    {
-      "Id": 8,
-      "Type": "Button",
-      "Label": "A3 Down"
-    },
-    {
-      "Id": 9,
-      "Type": "Button",
-      "Label": "A3 Left"
-    },
-    {
-      "Id": 10,
-      "Type": "Button",
-      "Label": "A3 Push"
-    },
-    {
-      "Id": 11,
-      "Type": "Button",
-      "Label": "A4 Up"
-    },
-    {
-      "Id": 12,
-      "Type": "Button",
-      "Label": "A4 Right"
-    },
-    {
-      "Id": 13,
-      "Type": "Button",
-      "Label": "A4 Down"
-    },
-    {
-      "Id": 14,
-      "Type": "Button",
-      "Label": "A4 Left"
-    },
-    {
-      "Id": 15,
-      "Type": "Button",
-      "Label": "A4 Push"
-    },
-    {
-      "Id": 16,
-      "Type": "Button",
-      "Label": "C1 Up"
-    },
-    {
-      "Id": 17,
-      "Type": "Button",
-      "Label": "C1 Right"
-    },
-    {
-      "Id": 18,
-      "Type": "Button",
-      "Label": "C1 Down"
-    },
-    {
-      "Id": 19,
-      "Type": "Button",
-      "Label": "C1 Left"
-    },
-    {
-      "Id": 20,
-      "Type": "Button",
-      "Label": "C1 Push"
-    },
-    {
-      "Id": 21,
-      "Type": "Button",
-      "Label": "Rapid Fire Push"
-    },
-    {
-      "Id": 22,
-      "Type": "Button",
-      "Label": "Rapid Fire Pull"
-    },
-    {
       "Id": 23,
       "Type": "Button",
       "Label": "En1 Up"
@@ -150,49 +40,134 @@
       "Label": "F3"
     },
     {
-      "Id": 30,
+      "Id": 1000,
       "Type": "Button",
-      "Label": "A1 Push"
+      "Label": "En1 Up"
     },
     {
-      "Id": 49,
-      "Type": "Axis",
-      "Label": "Axis - Pitch"
+      "Id": 1005,
+      "Type": "Button",
+      "Label": "En1 Down"
+    },
+    {
+      "Id": 41,
+      "Type": "Button",
+      "Label": "SEM A1"
+    },
+    {
+      "Id": 42,
+      "Type": "Button",
+      "Label": "SEM A2"
+    },
+    {
+      "Id": 43,
+      "Type": "Button",
+      "Label": "SEM B1"
+    },
+    {
+      "Id": 44,
+      "Type": "Button",
+      "Label": "SEM B2"
+    },
+    {
+      "Id": 45,
+      "Type": "Button",
+      "Label": "SEM B3"
+    },
+    {
+      "Id": 46,
+      "Type": "Button",
+      "Label": "SEM Sw1 Up"
+    },
+    {
+      "Id": 47,
+      "Type": "Button",
+      "Label": "SEM Sw1 Center"
     },
     {
       "Id": 48,
-      "Type": "Axis",
-      "Label": "Axis - Roll"
+      "Type": "Button",
+      "Label": "SEM Sw1 Down"
     },
     {
-      "Id": 53,
-      "Type": "Axis",
-      "Label": "Axis - Twist"
-    },
-    {
-      "Id": 52,
-      "Type": "Axis",
-      "Label": "Axis - A1 Y"
-    },
-    {
-      "Id": 51,
-      "Type": "Axis",
-      "Label": "Axis - A1 X"
+      "Id": 49,
+      "Type": "Button",
+      "Label": "SEM Sw2 Up"
     },
     {
       "Id": 50,
-      "Type": "Axis",
-      "Label": "Axis - Mini-Throttle"
+      "Type": "Button",
+      "Label": "SEM Sw2 Center"
+    },
+    {
+      "Id": 51,
+      "Type": "Button",
+      "Label": "SEM Sw2 Down"
+    },
+    {
+      "Id": 52,
+      "Type": "Button",
+      "Label": "SEM Start"
+    },
+    {
+      "Id": 53,
+      "Type": "Button",
+      "Label": "SEM Mode 1"
     },
     {
       "Id": 54,
-      "Type": "Axis",
-      "Label": "Axis - Sw1"
+      "Type": "Button",
+      "Label": "SEM Mode 2"
     },
     {
       "Id": 55,
-      "Type": "Axis",
-      "Label": "Axis - Aux"
+      "Type": "Button",
+      "Label": "SEM Mode 3"
+    },
+    {
+      "Id": 56,
+      "Type": "Button",
+      "Label": "SEM Mode 4"
+    },
+    {
+      "Id": 57,
+      "Type": "Button",
+      "Label": "SEM C1"
+    },
+    {
+      "Id": 58,
+      "Type": "Button",
+      "Label": "SEM Flaps 3"
+    },
+    {
+      "Id": 59,
+      "Type": "Button",
+      "Label": "SEM Flaps 2"
+    },
+    {
+      "Id": 60,
+      "Type": "Button",
+      "Label": "SEM Flaps 1"
+    },
+    {
+      "Id": 61,
+      "Type": "Button",
+      "Label": "SEM Flaps 0"
+    },
+    {
+      "Id": 62,
+      "Type": "Button",
+      "Label": "SEM Gear Down"
+    },
+    {
+      "Id": 63,
+      "Type": "Button",
+      "Label": "SEM Gear Neutral"
+    },
+    {
+      "Id": 64,
+      "Type": "Button",
+      "Label": "SEM Gear Up"
     }
   ],
   "Outputs": [
@@ -207,12 +182,6 @@
       "Id": "Sys.Red",
       "Byte": 0,
       "Bit": 1
-    },
-    {
-      "Label": "SCG Round",
-      "Id": "SCG.Round",
-      "Byte": 11,
-      "Bit": 0
     },
     {
       "Label": "SCG Oval - Red",
@@ -231,6 +200,12 @@
       "Id": "SCG.Oval.Blue",
       "Byte": 10,
       "Bit": 2
+    },
+    {
+      "Label": "SCG Round",
+      "Id": "SCG.Round",
+      "Byte": 11,
+      "Bit": 0
     },
     {
       "Label": "SEM A1 - Green",

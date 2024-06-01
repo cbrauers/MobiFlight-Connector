@@ -1068,16 +1068,12 @@
     <None Include="Joysticks\s_tecs_modern_throttle_max_stem.joystick.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Joysticks\vkbsim_gladiator_evo_r_sem.joystick.json" />
+    <None Include="Joysticks\vkbsim_nxt_fsm_ga.joystick.json" />
     <None Include="Joysticks\vkb_ww2_throttle.joystick.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Joysticks\vkb_fsm_ga.joystick.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Joysticks\vkb_gne_scg_r.joystick.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Joysticks\vkb_gne_scg_r_sem.joystick.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Joysticks\winwing_fcu.joystick.json">

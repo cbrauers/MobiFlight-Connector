@@ -3,7 +3,158 @@
   "InstanceName": "VKBSim NXT FSM.GA",
   "VendorId": "0x231D",
   "ProductId": "0x2220",
-  "Inputs": [],
+  "Inputs": [
+    {
+      "Id": 1,
+      "Type": "Button",
+      "Label": "FSM.GA HDG"
+    },
+    {
+      "Id": 2,
+      "Type": "Button",
+      "Label": "FSM.GA TRK"
+    },
+    {
+      "Id": 3,
+      "Type": "Button",
+      "Label": "FSM.GA NAV"
+    },
+    {
+      "Id": 4,
+      "Type": "Button",
+      "Label": "FSM.GA APR"
+    },
+    {
+      "Id": 5,
+      "Type": "Button",
+      "Label": "FSM.GA ALT"
+    },
+    {
+      "Id": 6,
+      "Type": "Button",
+      "Label": "FSM.GA LVL"
+    },
+    {
+      "Id": 7,
+      "Type": "Button",
+      "Label": "FSM.GA VNAV"
+    },
+    {
+      "Id": 8,
+      "Type": "Button",
+      "Label": "FSM.GA IAS"
+    },
+    {
+      "Id": 9,
+      "Type": "Button",
+      "Label": "FSM.GA AP"
+    },
+    {
+      "Id": 10,
+      "Type": "Button",
+      "Label": "FSM.GA FD"
+    },
+    {
+      "Id": 11,
+      "Type": "Button",
+      "Label": "FSM.GA YD"
+    },
+    {
+      "Id": 12,
+      "Type": "Button",
+      "Label": "FSM.GA VS"
+    },
+    {
+      "Id": 13,
+      "Type": "Button",
+      "Label": "FSM.GA Avionic"
+    },
+    {
+      "Id": 14,
+      "Type": "Button",
+      "Label": "FSM.GA Landing Lights"
+    },
+    {
+      "Id": 15,
+      "Type": "Button",
+      "Label": "FSM.GA Strobe"
+    },
+    {
+      "Id": 16,
+      "Type": "Button",
+      "Label": "FSM.GA Nav Lights"
+    },
+    {
+      "Id": 17,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK CCW"
+    },
+    {
+      "Id": 18,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK CW"
+    },
+    {
+      "Id": 19,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL CCW"
+    },
+    {
+      "Id": 20,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL CW"
+    },
+    {
+      "Id": 21,
+      "Type": "Button",
+      "Label": "FSM.GA VS Nose Down"
+    },
+    {
+      "Id": 22,
+      "Type": "Button",
+      "Label": "FSM.GA VS Nose Up"
+    },
+    {
+      "Id": 23,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK Push"
+    },
+    {
+      "Id": 24,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL Push"
+    },
+    {
+      "Id": 1000,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK CCW"
+    },
+    {
+      "Id": 1005,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK CW"
+    },
+    {
+      "Id": 1010,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL CCW"
+    },
+    {
+      "Id": 1015,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL CW"
+    },
+    {
+      "Id": 1020,
+      "Type": "Button",
+      "Label": "FSM.GA VS Nose Down"
+    },
+    {
+      "Id": 1025,
+      "Type": "Button",
+      "Label": "FSM.GA VS Nose Up"
+    }
+  ],
   "Outputs": [
     {
       "Label": "Sys - Blue",
@@ -19,13 +170,13 @@
     },
     {
       "Label": "FSM.GA HDG - Green",
-      "Id": "FSMGA.HDG.Green",
+      "Id": "FSMGA.HFG.Green",
       "Byte": 10,
       "Bit": 0
     },
     {
       "Label": "FSM.GA HDG - Red",
-      "Id": "FSMGA.HDG.Red",
+      "Id": "FSMGA.HFG.Red",
       "Byte": 10,
       "Bit": 1
     },
