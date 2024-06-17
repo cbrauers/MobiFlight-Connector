@@ -38,12 +38,14 @@ namespace MobiFlight.Joysticks.VKB
             if (InputReceiver == null)
             {
                 InputReceiver = new ReportDescriptor(VKBHidReport.Descriptor).CreateHidDeviceInputReceiver();
+                // We use our own descriptor since the one we get from Windows/HIDSharp has been altered and encoder data is missing
                 InputReceiver.Received += OnHidReportReceived;
                 InputReceiver.Start(Stream);
             }
         }
         protected override void SendData(byte[] data)
         {
+            // VKBLedContainer has its own handling that replaces RequiresOutputUpdate, so we just send.
             // Don't try and send data if no outputs are defined.
             if (Definition?.Outputs == null || Definition?.Outputs.Count == 0)
             {
@@ -60,6 +62,7 @@ namespace MobiFlight.Joysticks.VKB
             if (Definition == null || Definition.Inputs == null) return;
             foreach (var input in Definition.Inputs)
             {
+                // The 1xxx range is limited to encoders. They are also not fed from DirectInput.
                 if (input.Id >= 1000 && input.Id < 2000 && input.Type == JoystickDeviceType.Button)
                 {
                     byte encoderIndex = GetEncoderIndex(input);
@@ -72,15 +75,16 @@ namespace MobiFlight.Joysticks.VKB
                     {
                         EncoderIncList.Add(encoderIndex, new JoystickDevice { Name = $"Button {1000 + 10 * encoderIndex + (int)encoderAction}", Label = input.Label, Type = DeviceType.Button, JoystickDeviceType = input.Type });
                     }
-                    Buttons.FindAll(but => but.Label == input.Label).ForEach(but => but.Label += " (Legacy DirectInput)");
+                    Buttons.FindAll(but => but.Label == input.Label).ForEach(but => but.Label += " (Legacy DirectInput)"); 
+                    // Rename the original buttons to keep indexing intact and ensure compatibility with devices not configured to use encoder channels.
                 }
             }
             foreach (var encdec in EncoderDecList)
             {
                 if (EncoderIncList.ContainsKey(encdec.Key))
                 {
-                    Encoders.Add(encdec.Key, new VKBEncoder(EncoderIncList[encdec.Key], encdec.Value));
-                    Buttons.Add(Encoders[encdec.Key].DeviceDec);
+                    Encoders.Add(encdec.Key, new VKBEncoder(EncoderIncList[encdec.Key], encdec.Value)); // If both increment and decrement were in the definition, we create an encoder object from the definition file
+                    Buttons.Add(Encoders[encdec.Key].DeviceDec); // And register their virtual buttons in the joystick's button list.
                     Buttons.Add(Encoders[encdec.Key].DeviceInc);
                 }
             }
@@ -109,7 +113,7 @@ namespace MobiFlight.Joysticks.VKB
         public override void UpdateOutputDeviceStates()
         {
             var data = Lights.CreateMessage();
-            if (data[7] == 0) return;
+            if (data[7] == 0) return; // Only send message if there are non-zero LEDs to be updated
             try
             {
                 SendData(data);
@@ -139,6 +143,8 @@ namespace MobiFlight.Joysticks.VKB
             if (((lastSeqNo + 1) & 0xFF) != sequenceNo)
             {
                 Log.Instance.log("Some VKB encoder messages may have been missed", LogSeverity.Debug);
+                // Can easily happen if many updates are sent in quick succession (like when an encoder is spun fast)
+                // Not a problem since API reports absolute state, so the updates are just received on the next received message.
             }
             lastSeqNo = sequenceNo;
             byte encoderCount = Report[3];
@@ -147,6 +153,7 @@ namespace MobiFlight.Joysticks.VKB
             {
                 Log.Instance.log($"Log message reports {encoderCount} encoders, but only has space for {maxEncoders}. Some encoders were ignored.", LogSeverity.Warn);
                 encoderCount = (byte)maxEncoders;
+                // Should not occur in most real-life scenarios, but it is theoretically possible to construct a device with more encoders than the report can handle.
             }
             List<InputEventArgs> events = new List<InputEventArgs>();
             for (byte i = 0; i < encoderCount; i++)
@@ -154,6 +161,7 @@ namespace MobiFlight.Joysticks.VKB
                 ushort newPos = (ushort)(Report[5 + 2 * i] << 8 | Report[4 + 2 * i]);
                 if (!Encoders.ContainsKey(i))
                 {
+                    // Add encoders that were not part of definition when we first receive a message with them.
                     Encoders.Add(i, new VKBEncoder(i, newPos));
                     Buttons.Add(Encoders[i].DeviceDec);
                     Buttons.Add(Encoders[i].DeviceInc);
@@ -165,39 +173,15 @@ namespace MobiFlight.Joysticks.VKB
             }
             foreach (InputEventArgs e in events)
             {
+                // Process the encoder events created by the encoder object.
                 e.Name = Name;
                 e.Serial = SerialPrefix + DIJoystick.Information.InstanceGuid.ToString();
                 TriggerButtonPressed(this, e);
             }
         }
-        //private static JoystickDefinition FilterDefinition(JoystickDefinition definition)
-        //{
-        //    JoystickDefinition filteredDefinition = new JoystickDefinition();
-        //    List<string> encoderOverrides = new List<string>();
-        //    filteredDefinition.InstanceName = definition.InstanceName;
-        //    filteredDefinition.VendorId = definition.VendorId;
-        //    filteredDefinition.ProductId = definition.ProductId;
-        //    filteredDefinition.Outputs = definition.Outputs;
-        //    filteredDefinition.Inputs = new List<JoystickInput>();
-        //    foreach (var input in definition.Inputs)
-        //    {
-        //        if (input.Id >= 1000 && input.Id < 2000)
-        //        {
-        //            //encoderOverrides.Add(input.Label);
-        //            filteredDefinition.Inputs.Add(input);
-        //        }
-        //    }
-        //    foreach (var input in definition.Inputs)
-        //    {
-        //        if (input.Id < 1000 && !encoderOverrides.Contains(input.Label))
-        //        {
-        //            filteredDefinition.Inputs.Add(input);
-        //        }
-        //    }
-        //    return filteredDefinition;
-        //}
         public static HidDevice GetMatchingHidDevice(SharpDX.DirectInput.Joystick joystick)
         {
+            // Get the HID device using the device path. We are not relying on PID alone because multiple devices may have the same PID under certain circumstances, e.g. identical module combos.
             var DevList = DeviceList.Local.GetHidDevices(joystick.Properties.VendorId, joystick.Properties.ProductId);
             foreach (HidDevice dev in DevList)
                 if (dev.DevicePath == joystick.Properties.InterfacePath)

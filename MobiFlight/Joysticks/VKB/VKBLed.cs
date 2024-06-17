@@ -2,15 +2,23 @@
 {
     internal class VKBLed
     {
-        public enum ColorMode : byte
+        /*
+         * VKB LEDs come in three types: Mono, bi-color and RGB.
+         * Mobiflight uses a bit/byte system to handle LEDs in generic controllers (e.g. Honeycomb), where each LED is a bit flag.
+         * For VKB devices, this is co-opted to encode LED IDs (assigned in VKBDevCfg for each sub-device) and color channels.
+         * Monochrome LEDs just have "bit" 0 to turn the LED on and off
+         * Bicolor LEDs have bit 0 for color1 (usually green/blue) and bit 1 for color2 (usually red)
+         * RGB LEDs have bit 0 for the red channel, 1 for green and 2 for blue.
+         */
+        public enum ColorMode : byte // 1, 2 and 1+2 are relevant for Mobiflight. 1/2 and 2/1 are used with hardware flash patterns.
         {
             Color1 = 0,
             Color2 = 1,
             Color1_2 = 2,
             Color2_1 = 3,
             Color1plus2 = 4
-        }
-        public enum FlashPattern : byte
+        };
+        public enum FlashPattern : byte // MobiFlight LEDs are not complex enough to take advantage of hardware flash patterns yet.
         {
             Off = 0,
             Constantly = 1,
@@ -19,11 +27,13 @@
             UltraFast = 4
         };
         private readonly JoystickOutputDevice[] LedChannels = new JoystickOutputDevice[3];
-        private bool dirty = true;
-        private bool used = false;
-        private bool greenred = false;
+        private bool dirty = true; // There have been changes since the last time the values were sent to the device
+                                   // Initialized as true to ensure that no output gets ignored.
+        private bool used = false; // Changes have been made to the LED since initialization.
+                                   // This prevents packets from being sent when no output is configured.
+        private bool greenred = false; // Special handling of green/red LEDs to get a decent amber when both are on
         private readonly byte LedId = 0;
-        private const byte defaultBrightness = 5;
+        private const byte defaultBrightness = 5; // VKB LEDs have 7 brightness levels, but MobiFlight does not support PWM on HIDs
         public VKBLed(byte id)
         {
             LedId = id;
@@ -50,7 +60,7 @@
         }
         public void SetState(byte channel, byte state)
         {
-            used = true;
+            used = true; // Ensure that the LED state is only sent if an output is associated with the LED.
             if (LedChannels[channel].State != state) dirty = true;
             LedChannels[channel].State = state;
         }
@@ -117,9 +127,10 @@
             }
             else
             {
-                byte brightness = defaultBrightness;
-                if (activeLeds > 1) brightness = 7;
                 // Single or bicolor LED, other than red/green LEDs
+                byte brightness = defaultBrightness;
+                if (activeLeds > 1) brightness = 7; // Since Color1+2 means the controller is alternating between both colors (like PWM), we need to increase
+                                                    // the brightness over the base brightness.
                 for (int col = 0; col < ColorIntensity.GetLength(0); col++)
                 {
                     byte[] channelstate = new byte[2] { (LedChannels[0]?.State ?? 0), (LedChannels[1]?.State ?? 0) };
@@ -144,6 +155,7 @@
                     ColorIntensity[1, col] = (byte)((LedChannels[1]?.State ?? 0) * brightness);
                 }
             }
+            // Serialize the block into a tightly-packed structure with several 3-bit variables - USB is LSB-first.
             LedBlock[0] = LedId;
             LedBlock[1] = (byte)(ColorIntensity[0, 0] | ColorIntensity[0, 1] << 3 | (ColorIntensity[0, 2] & 0x03) << 6);
             LedBlock[2] = (byte)(ColorIntensity[0, 2] >> 2 | ColorIntensity[1, 0] << 1 | ColorIntensity[1, 1] << 4 | (ColorIntensity[1, 2] & 0x01) << 7);
@@ -153,7 +165,7 @@
         }
         public bool IsChanged()
         {
-            return dirty && used;
+            return dirty && used; // The values have changed since the last message was sent.
         }
     }
 }

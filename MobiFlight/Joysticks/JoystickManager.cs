@@ -169,6 +169,8 @@ namespace MobiFlight
                 }
                 else if (diJoystick.Properties.VendorId == 0x231D)
                 {
+                    // VKB devices are highly configurable. DirectInput names can have old values cached in the registry, but HID names seem to be immune to that.
+                    // Also trim the extraneous whitespaces on VKB device names.
                     js = new VKBDevice(diJoystick, GetDefinitionByInstanceName(VKBDevice.GetMatchingHidDevice(diJoystick).GetProductName().Trim()));
                 }
                 else
