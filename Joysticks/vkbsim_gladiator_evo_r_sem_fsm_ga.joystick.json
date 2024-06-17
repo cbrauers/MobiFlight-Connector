@@ -1,8 +1,8 @@
 {
   "$schema": "./mfjoystick.schema.json",
-  "InstanceName": "VKBsim Gladiator EVO R SEM",
+  "InstanceName": "VKBsim Gladiator EVO R SEM FSM.GA",
   "VendorId": "0x231D",
-  "ProductId": "0x0204",
+  "ProductId": "0x0224",
   "Inputs": [
     {
       "Id": 1,
@@ -333,6 +333,156 @@
       "Id": 64,
       "Type": "Button",
       "Label": "SEM Gear Up"
+    },
+    {
+      "Id": 65,
+      "Type": "Button",
+      "Label": "FSM.GA HDG"
+    },
+    {
+      "Id": 66,
+      "Type": "Button",
+      "Label": "FSM.GA TRK"
+    },
+    {
+      "Id": 67,
+      "Type": "Button",
+      "Label": "FSM.GA NAV"
+    },
+    {
+      "Id": 68,
+      "Type": "Button",
+      "Label": "FSM.GA APR"
+    },
+    {
+      "Id": 69,
+      "Type": "Button",
+      "Label": "FSM.GA ALT"
+    },
+    {
+      "Id": 70,
+      "Type": "Button",
+      "Label": "FSM.GA LVL"
+    },
+    {
+      "Id": 71,
+      "Type": "Button",
+      "Label": "FSM.GA VNAV"
+    },
+    {
+      "Id": 72,
+      "Type": "Button",
+      "Label": "FSM.GA IAS"
+    },
+    {
+      "Id": 73,
+      "Type": "Button",
+      "Label": "FSM.GA AP"
+    },
+    {
+      "Id": 74,
+      "Type": "Button",
+      "Label": "FSM.GA FD"
+    },
+    {
+      "Id": 75,
+      "Type": "Button",
+      "Label": "FSM.GA YD"
+    },
+    {
+      "Id": 76,
+      "Type": "Button",
+      "Label": "FSM.GA VS"
+    },
+    {
+      "Id": 77,
+      "Type": "Button",
+      "Label": "FSM.GA Avionic"
+    },
+    {
+      "Id": 78,
+      "Type": "Button",
+      "Label": "FSM.GA Landing Lights"
+    },
+    {
+      "Id": 79,
+      "Type": "Button",
+      "Label": "FSM.GA Strobe"
+    },
+    {
+      "Id": 80,
+      "Type": "Button",
+      "Label": "FSM.GA Nav Lights"
+    },
+    {
+      "Id": 81,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK CCW"
+    },
+    {
+      "Id": 82,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK CW"
+    },
+    {
+      "Id": 83,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL CCW"
+    },
+    {
+      "Id": 84,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL CW"
+    },
+    {
+      "Id": 85,
+      "Type": "Button",
+      "Label": "FSM.GA VS Nose Down"
+    },
+    {
+      "Id": 86,
+      "Type": "Button",
+      "Label": "FSM.GA VS Nose Up"
+    },
+    {
+      "Id": 87,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK Push"
+    },
+    {
+      "Id": 88,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL Push"
+    },
+    {
+      "Id": 1010,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK CCW"
+    },
+    {
+      "Id": 1015,
+      "Type": "Button",
+      "Label": "FSM.GA HDG TRK CW"
+    },
+    {
+      "Id": 1020,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL CCW"
+    },
+    {
+      "Id": 1025,
+      "Type": "Button",
+      "Label": "FSM.GA ALT SEL CW"
+    },
+    {
+      "Id": 1030,
+      "Type": "Button",
+      "Label": "FSM.GA VS Nose Down"
+    },
+    {
+      "Id": 1035,
+      "Type": "Button",
+      "Label": "FSM.GA VS Nose Up"
     }
   ],
   "Outputs": [
@@ -466,6 +616,150 @@
       "Label": "SEM Gear Right - Red",
       "Id": "SEM.GearR.Red",
       "Byte": 19,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA HDG - Green",
+      "Id": "FSMGA.HDG.Green",
+      "Byte": 20,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA HDG - Red",
+      "Id": "FSMGA.HDG.Red",
+      "Byte": 20,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA TRK - Green",
+      "Id": "FSMGA.TRK.Green",
+      "Byte": 21,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA TRK - Red",
+      "Id": "FSMGA.TRK.Red",
+      "Byte": 21,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA NAV - Green",
+      "Id": "FSMGA.NAV.Green",
+      "Byte": 22,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA NAV - Red",
+      "Id": "FSMGA.NAV.Red",
+      "Byte": 22,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA APR - Green",
+      "Id": "FSMGA.APR.Green",
+      "Byte": 23,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA APR - Red",
+      "Id": "FSMGA.APR.Red",
+      "Byte": 23,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA ALT - Green",
+      "Id": "FSMGA.ALT.Green",
+      "Byte": 24,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA ALT - Red",
+      "Id": "FSMGA.ALT.Red",
+      "Byte": 24,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA LVL - Green",
+      "Id": "FSMGA.LVL.Green",
+      "Byte": 25,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA LVL - Red",
+      "Id": "FSMGA.LVL.Red",
+      "Byte": 25,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA VNAV - Green",
+      "Id": "FSMGA.VNAV.Green",
+      "Byte": 26,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA VNAV - Red",
+      "Id": "FSMGA.VNAV.Red",
+      "Byte": 26,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA IAS - Green",
+      "Id": "FSMGA.IAS.Green",
+      "Byte": 27,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA IAS - Red",
+      "Id": "FSMGA.IAS.Red",
+      "Byte": 27,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA AP - Green",
+      "Id": "FSMGA.AP.Green",
+      "Byte": 28,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA AP - Red",
+      "Id": "FSMGA.AP.Red",
+      "Byte": 28,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA FD - Green",
+      "Id": "FSMGA.FD.Green",
+      "Byte": 29,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA FD - Red",
+      "Id": "FSMGA.FD.Red",
+      "Byte": 29,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA YD - Green",
+      "Id": "FSMGA.YD.Green",
+      "Byte": 30,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA YD - Red",
+      "Id": "FSMGA.YD.Red",
+      "Byte": 30,
+      "Bit": 1
+    },
+    {
+      "Label": "FSM.GA VS - Green",
+      "Id": "FSMGA.VS.Green",
+      "Byte": 31,
+      "Bit": 0
+    },
+    {
+      "Label": "FSM.GA VS - Red",
+      "Id": "FSMGA.VS.Red",
+      "Byte": 31,
       "Bit": 1
     }
   ]

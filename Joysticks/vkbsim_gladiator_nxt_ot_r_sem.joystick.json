@@ -1,8 +1,8 @@
 {
   "$schema": "./mfjoystick.schema.json",
-  "InstanceName": "VKBsim Gladiator EVO R SEM",
+  "InstanceName": "VKBsim Gladiator NXT OT R SEM",
   "VendorId": "0x231D",
-  "ProductId": "0x0204",
+  "ProductId": "0x3204",
   "Inputs": [
     {
       "Id": 1,
@@ -127,12 +127,12 @@
     {
       "Id": 25,
       "Type": "Button",
-      "Label": "Sw1 Up"
+      "Label": "En2 Up"
     },
     {
       "Id": 26,
       "Type": "Button",
-      "Label": "Sw1 Down"
+      "Label": "En2 Down"
     },
     {
       "Id": 27,
@@ -213,6 +213,16 @@
       "Id": 1005,
       "Type": "Button",
       "Label": "En1 Down"
+    },
+    {
+      "Id": 1010,
+      "Type": "Button",
+      "Label": "En2 Up"
+    },
+    {
+      "Id": 1015,
+      "Type": "Button",
+      "Label": "En2 Down"
     },
     {
       "Id": 41,

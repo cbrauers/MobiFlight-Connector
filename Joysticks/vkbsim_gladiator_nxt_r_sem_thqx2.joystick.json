@@ -1,8 +1,8 @@
 {
   "$schema": "./mfjoystick.schema.json",
-  "InstanceName": "VKBsim Gladiator EVO R SEM",
+  "InstanceName": "VKBsim Gladiator NXT R SEM THQx2",
   "VendorId": "0x231D",
-  "ProductId": "0x0204",
+  "ProductId": "0x0224",
   "Inputs": [
     {
       "Id": 1,
@@ -127,12 +127,12 @@
     {
       "Id": 25,
       "Type": "Button",
-      "Label": "Sw1 Up"
+      "Label": "En2 Up"
     },
     {
       "Id": 26,
       "Type": "Button",
-      "Label": "Sw1 Down"
+      "Label": "En2 Down"
     },
     {
       "Id": 27,
@@ -213,6 +213,16 @@
       "Id": 1005,
       "Type": "Button",
       "Label": "En1 Down"
+    },
+    {
+      "Id": 1010,
+      "Type": "Button",
+      "Label": "En2 Up"
+    },
+    {
+      "Id": 1015,
+      "Type": "Button",
+      "Label": "En2 Down"
     },
     {
       "Id": 41,
@@ -333,6 +343,86 @@
       "Id": 64,
       "Type": "Button",
       "Label": "SEM Gear Up"
+    },
+    {
+      "Id": 65,
+      "Type": "Button",
+      "Label": "THQ A1"
+    },
+    {
+      "Id": 66,
+      "Type": "Button",
+      "Label": "THQ A2"
+    },
+    {
+      "Id": 67,
+      "Type": "Button",
+      "Label": "THQ A3"
+    },
+    {
+      "Id": 68,
+      "Type": "Button",
+      "Label": "THQ A4"
+    },
+    {
+      "Id": 69,
+      "Type": "Button",
+      "Label": "THQ B1"
+    },
+    {
+      "Id": 70,
+      "Type": "Button",
+      "Label": "THQ C1"
+    },
+    {
+      "Id": 71,
+      "Type": "Button",
+      "Label": "THQ C2"
+    },
+    {
+      "Id": 72,
+      "Type": "Button",
+      "Label": "THQ B2"
+    },
+    {
+      "Id": 73,
+      "Type": "Button",
+      "Label": "THQ 2 A1"
+    },
+    {
+      "Id": 74,
+      "Type": "Button",
+      "Label": "THQ 2 A2"
+    },
+    {
+      "Id": 75,
+      "Type": "Button",
+      "Label": "THQ 2 A3"
+    },
+    {
+      "Id": 76,
+      "Type": "Button",
+      "Label": "THQ 2 A4"
+    },
+    {
+      "Id": 77,
+      "Type": "Button",
+      "Label": "THQ 2 B1"
+    },
+    {
+      "Id": 78,
+      "Type": "Button",
+      "Label": "THQ 2 C1"
+    },
+    {
+      "Id": 79,
+      "Type": "Button",
+      "Label": "THQ 2 C2"
+    },
+    {
+      "Id": 80,
+      "Type": "Button",
+      "Label": "THQ 2 B2"
     }
   ],
   "Outputs": [

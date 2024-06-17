@@ -1,6 +1,6 @@
 {
   "$schema": "./mfjoystick.schema.json",
-  "InstanceName": "S-TECS MODERN THROTTLE MAX STEM",
+  "InstanceName": "S-TECS MODERN THROTTLE MAX",
   "VendorId": "0x231D",
   "ProductId": "0x012E",
   "Inputs": [
@@ -105,16 +105,6 @@
       "Label": "Multi Push"
     },
     {
-      "Id": 1000,
-      "Type": "Button",
-      "Label": "Multi CCW"
-    },
-    {
-      "Id": 1005,
-      "Type": "Button",
-      "Label": "Multi CW"
-    },
-    {
       "Id": 21,
       "Type": "Button",
       "Label": "MTG-L Aft Trigger"
@@ -151,26 +141,6 @@
     },
     {
       "Id": 28,
-      "Type": "Button",
-      "Label": "MTG-L Side Encoder Aft"
-    },
-    {
-      "Id": 1010,
-      "Type": "Button",
-      "Label": "MTG-L Front Encoder Up"
-    },
-    {
-      "Id": 1015,
-      "Type": "Button",
-      "Label": "MTG-L Front Encoder Down"
-    },
-    {
-      "Id": 1020,
-      "Type": "Button",
-      "Label": "MTG-L Side Encoder Fwd"
-    },
-    {
-      "Id": 1025,
       "Type": "Button",
       "Label": "MTG-L Side Encoder Aft"
     },
@@ -388,26 +358,6 @@
       "Id": 71,
       "Type": "Button",
       "Label": "STEM Lever Down"
-    },
-    {
-      "Id": 1030,
-      "Type": "Button",
-      "Label": "STEM En1 CCW"
-    },
-    {
-      "Id": 1035,
-      "Type": "Button",
-      "Label": "STEM En1 CW"
-    },
-    {
-      "Id": 1040,
-      "Type": "Button",
-      "Label": "STEM En2 CCW"
-    },
-    {
-      "Id": 1045,
-      "Type": "Button",
-      "Label": "STEM En2 CW"
     }
   ],
   "Outputs": [

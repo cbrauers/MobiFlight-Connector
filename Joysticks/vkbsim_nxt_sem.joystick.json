@@ -1,9 +1,130 @@
 {
   "$schema": "./mfjoystick.schema.json",
-  "InstanceName": "VKBSim NXT SEM THQ",
+  "InstanceName": "VKBSim NXT SEM",
   "VendorId": "0x231D",
-  "ProductId": "0x2214",
-  "Inputs": [],
+  "ProductId": "0x2204",
+  "Inputs": [
+    {
+      "Id": 1,
+      "Type": "Button",
+      "Label": "SEM A1"
+    },
+    {
+      "Id": 2,
+      "Type": "Button",
+      "Label": "SEM A2"
+    },
+    {
+      "Id": 3,
+      "Type": "Button",
+      "Label": "SEM B1"
+    },
+    {
+      "Id": 4,
+      "Type": "Button",
+      "Label": "SEM B2"
+    },
+    {
+      "Id": 5,
+      "Type": "Button",
+      "Label": "SEM B3"
+    },
+    {
+      "Id": 6,
+      "Type": "Button",
+      "Label": "SEM Sw1 Up"
+    },
+    {
+      "Id": 7,
+      "Type": "Button",
+      "Label": "SEM Sw1 Center"
+    },
+    {
+      "Id": 8,
+      "Type": "Button",
+      "Label": "SEM Sw1 Down"
+    },
+    {
+      "Id": 9,
+      "Type": "Button",
+      "Label": "SEM Sw2 Up"
+    },
+    {
+      "Id": 10,
+      "Type": "Button",
+      "Label": "SEM Sw2 Center"
+    },
+    {
+      "Id": 11,
+      "Type": "Button",
+      "Label": "SEM Sw2 Down"
+    },
+    {
+      "Id": 12,
+      "Type": "Button",
+      "Label": "SEM Start"
+    },
+    {
+      "Id": 13,
+      "Type": "Button",
+      "Label": "SEM Mode 1"
+    },
+    {
+      "Id": 14,
+      "Type": "Button",
+      "Label": "SEM Mode 2"
+    },
+    {
+      "Id": 15,
+      "Type": "Button",
+      "Label": "SEM Mode 3"
+    },
+    {
+      "Id": 16,
+      "Type": "Button",
+      "Label": "SEM Mode 4"
+    },
+    {
+      "Id": 17,
+      "Type": "Button",
+      "Label": "SEM C1"
+    },
+    {
+      "Id": 18,
+      "Type": "Button",
+      "Label": "SEM Flaps 3"
+    },
+    {
+      "Id": 19,
+      "Type": "Button",
+      "Label": "SEM Flaps 2"
+    },
+    {
+      "Id": 20,
+      "Type": "Button",
+      "Label": "SEM Flaps 1"
+    },
+    {
+      "Id": 21,
+      "Type": "Button",
+      "Label": "SEM Flaps 0"
+    },
+    {
+      "Id": 22,
+      "Type": "Button",
+      "Label": "SEM Gear Down"
+    },
+    {
+      "Id": 23,
+      "Type": "Button",
+      "Label": "SEM Gear Neutral"
+    },
+    {
+      "Id": 24,
+      "Type": "Button",
+      "Label": "SEM Gear Up"
+    }
+  ],
   "Outputs": [
     {
       "Label": "Sys - Blue",

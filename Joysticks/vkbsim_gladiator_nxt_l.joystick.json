@@ -1,18 +1,18 @@
 {
   "$schema": "./mfjoystick.schema.json",
-  "InstanceName": "VKBsim Gladiator EVO R",
+  "InstanceName": "VKBsim Gladiator NXT L",
   "VendorId": "0x231D",
-  "ProductId": "0x0200",
+  "ProductId": "0x0201",
   "Inputs": [
     {
       "Id": 1,
       "Type": "Button",
-      "Label": "Trigger 1"
+      "Label": "Trigger Soft"
     },
     {
       "Id": 2,
       "Type": "Button",
-      "Label": "Trigger 2"
+      "Label": "Trigger Hard"
     },
     {
       "Id": 3,
@@ -107,12 +107,12 @@
     {
       "Id": 21,
       "Type": "Button",
-      "Label": "Rapid Fire Push"
+      "Label": "Rapid Fire Up"
     },
     {
       "Id": 22,
       "Type": "Button",
-      "Label": "Rapid Fire Pull"
+      "Label": "Rapid Fire Down"
     },
     {
       "Id": 23,
@@ -127,12 +127,12 @@
     {
       "Id": 25,
       "Type": "Button",
-      "Label": "Sw1 Up"
+      "Label": "En2 Up"
     },
     {
       "Id": 26,
       "Type": "Button",
-      "Label": "Sw1 Down"
+      "Label": "En2 Down"
     },
     {
       "Id": 27,
@@ -155,44 +155,74 @@
       "Label": "A1 Push"
     },
     {
-      "Id": 49,
-      "Type": "Axis",
-      "Label": "Axis - Pitch"
+      "Id": 31,
+      "Type": "Button",
+      "Label": "Unused Button 31"
     },
     {
-      "Id": 48,
-      "Type": "Axis",
-      "Label": "Axis - Roll"
+      "Id": 32,
+      "Type": "Button",
+      "Label": "Unused Button 32"
     },
     {
-      "Id": 53,
-      "Type": "Axis",
-      "Label": "Axis - Twist"
+      "Id": 33,
+      "Type": "Button",
+      "Label": "Unused Button 33"
     },
     {
-      "Id": 52,
-      "Type": "Axis",
-      "Label": "Axis - A1 Y"
+      "Id": 34,
+      "Type": "Button",
+      "Label": "Unused Button 34"
     },
     {
-      "Id": 51,
-      "Type": "Axis",
-      "Label": "Axis - A1 X"
+      "Id": 35,
+      "Type": "Button",
+      "Label": "Unused Button 35"
     },
     {
-      "Id": 50,
-      "Type": "Axis",
-      "Label": "Axis - Mini-Throttle"
+      "Id": 36,
+      "Type": "Button",
+      "Label": "Unused Button 36"
     },
     {
-      "Id": 54,
-      "Type": "Axis",
-      "Label": "Axis - Sw1"
+      "Id": 37,
+      "Type": "Button",
+      "Label": "Unused Button 37"
     },
     {
-      "Id": 55,
-      "Type": "Axis",
-      "Label": "Axis - Aux"
+      "Id": 38,
+      "Type": "Button",
+      "Label": "Unused Button 38"
+    },
+    {
+      "Id": 39,
+      "Type": "Button",
+      "Label": "Unused Button 39"
+    },
+    {
+      "Id": 40,
+      "Type": "Button",
+      "Label": "Unused Button 40"
+    },
+    {
+      "Id": 1000,
+      "Type": "Button",
+      "Label": "En1 Up"
+    },
+    {
+      "Id": 1005,
+      "Type": "Button",
+      "Label": "En1 Down"
+    },
+    {
+      "Id": 1010,
+      "Type": "Button",
+      "Label": "En2 Up"
+    },
+    {
+      "Id": 1015,
+      "Type": "Button",
+      "Label": "En2 Down"
     }
   ],
   "Outputs": [
@@ -207,12 +237,6 @@
       "Id": "Sys.Red",
       "Byte": 0,
       "Bit": 1
-    },
-    {
-      "Label": "SCG Round",
-      "Id": "SCG.Round",
-      "Byte": 11,
-      "Bit": 0
     },
     {
       "Label": "SCG Oval - Red",
@@ -231,6 +255,12 @@
       "Id": "SCG.Oval.Blue",
       "Byte": 10,
       "Bit": 2
+    },
+    {
+      "Label": "SCG Round",
+      "Id": "SCG.Round",
+      "Byte": 11,
+      "Bit": 0
     }
   ]
 }

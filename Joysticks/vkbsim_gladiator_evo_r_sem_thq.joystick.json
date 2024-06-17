@@ -1,8 +1,8 @@
 {
   "$schema": "./mfjoystick.schema.json",
-  "InstanceName": "VKBsim Gladiator EVO R SEM",
+  "InstanceName": "VKBsim Gladiator EVO R SEM THQ",
   "VendorId": "0x231D",
-  "ProductId": "0x0204",
+  "ProductId": "0x0214",
   "Inputs": [
     {
       "Id": 1,
@@ -333,6 +333,46 @@
       "Id": 64,
       "Type": "Button",
       "Label": "SEM Gear Up"
+    },
+    {
+      "Id": 65,
+      "Type": "Button",
+      "Label": "THQ A1"
+    },
+    {
+      "Id": 66,
+      "Type": "Button",
+      "Label": "THQ A2"
+    },
+    {
+      "Id": 67,
+      "Type": "Button",
+      "Label": "THQ A3"
+    },
+    {
+      "Id": 68,
+      "Type": "Button",
+      "Label": "THQ A4"
+    },
+    {
+      "Id": 69,
+      "Type": "Button",
+      "Label": "THQ B1"
+    },
+    {
+      "Id": 70,
+      "Type": "Button",
+      "Label": "THQ C1"
+    },
+    {
+      "Id": 71,
+      "Type": "Button",
+      "Label": "THQ C2"
+    },
+    {
+      "Id": 72,
+      "Type": "Button",
+      "Label": "THQ B2"
     }
   ],
   "Outputs": [
